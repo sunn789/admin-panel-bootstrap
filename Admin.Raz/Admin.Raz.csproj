@@ -22,5 +22,7 @@
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="7.0.4" />
   </ItemGroup>
-
+  <ItemGroup>
+    <ProjectReference Include="..\Admin.Repo\Admin.Repo.csproj" />
+  </ItemGroup>
 </Project>

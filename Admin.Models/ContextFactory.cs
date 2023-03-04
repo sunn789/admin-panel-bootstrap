@@ -1,13 +1,16 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
- namespace Sirjan.Models
- {
-public class ContextFactory : IDesignTimeDbContextFactory<AdminContext>
+
+
+namespace Admin.Models
 {
-    public AdminContext CreateDbContext(string[] args)
+    public class ContextFactory : IDesignTimeDbContextFactory<AdminContext>
     {
-        var builder = new DbContextOptionsBuilder<AdminContext>();
-        builder. UseSqlServer(@"Server=1.1.1.1;Database=AdminDb;TrustServerCertificate=True;Integrated Security=false;Initial Catalog=AdminDB;User ID=UserDB;Password=myPassword#;");
-        return new AdminContext(builder.Options);
+        public AdminContext CreateDbContext(string[] args)
+        {
+            var builder = new DbContextOptionsBuilder<AdminContext>();
+            builder.UseSqlServer(@"Server=1.1.1.1;Database=AdminDb;TrustServerCertificate=True;Integrated Security=false;Initial Catalog=AdminDB;User ID=UserDB;Password=myPassword#;");
+            return new AdminContext(builder.Options);
+        }
     }
-}}
+}
