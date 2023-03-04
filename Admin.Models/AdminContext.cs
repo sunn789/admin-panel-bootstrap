@@ -1,13 +1,12 @@
 
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
-using Sirjan.Models;
 
 namespace Admin.Models
 {
     public class AdminContext : DbContext
     {
-public AdminContext(DbContextOptions<AdminContext> options) : base(options)
+        public AdminContext(DbContextOptions<AdminContext> options) : base(options)
         {
 
         }

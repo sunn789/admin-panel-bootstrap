@@ -1,12 +1,13 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using MyProject.Models;
+using Admin.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("MyProjectContextConnection") ?? throw new InvalidOperationException("Connection string 'MyProjectContextConnection' not found.");
 
-builder.Services.AddDbContext<MyProjectContext>(options => options.UseSqlServer(connectionString));
+builder.Services.AddDbContext<AdminContext>(options => options.UseSqlServer(connectionString));
 
-builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<MyProjectContext>();
+builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddEntityFrameworkStores<AdminContext>();
 
 // Add services to the container.
 builder.Services.AddRazorPages();
