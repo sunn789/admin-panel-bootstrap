@@ -17,4 +17,5 @@
     <ItemGroup>
     <ProjectReference Include="..\Admin.Core\Admin.Core.csproj" />
   </ItemGroup>
+
 </Project>

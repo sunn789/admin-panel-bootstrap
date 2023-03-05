@@ -25,4 +25,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Admin.Repo\Admin.Repo.csproj" />
   </ItemGroup>
+      <ItemGroup>
+    <ProjectReference Include="..\Admin.Models\Admin.Models.csproj" />
+  </ItemGroup>
 </Project>

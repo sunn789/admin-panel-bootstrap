@@ -1,10 +1,12 @@
 
 using System.Linq;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Admin.Models
 {
-    public class AdminContext : DbContext
+    public class AdminContext : IdentityDbContext
     {
         public AdminContext(DbContextOptions<AdminContext> options) : base(options)
         {
@@ -27,4 +29,6 @@ namespace Admin.Models
             optionsBuilder.UseSqlServer(@"Server=1.1.1.1;Database=AdminDb;TrustServerCertificate=True;Integrated Security=false;Initial Catalog=AdminDB;User ID=UserDB;Password=myPassword#;");
         }
     }
+    public class ApplicationUser : IdentityUser
+      { }
 }
